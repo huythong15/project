@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>SB Admin - Start Bootstrap Template</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index1.html">Manager Eduka</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index1.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Home</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Charts</span>
+          </a>
+        </li> -->
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Tables</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Pages</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+            <li>
+              <a href="index.html">Login Page</a>
+            </li>
+            <li>
+              <a href="importsearch.html">Import Search</a>
+            </li>
+            <li>
+              <a href="forgot-password.html">Forgot Password Page</a>
+            </li>
+            <li>
+              <a href="blank.html">Import file</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-sitemap"></i>
+            <span class="nav-link-text">Data </span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti">
+            <li>
+              <a href="#">List Language</a>
+            </li>
+            <li>
+              <a href="#">List Category</a>
+            </li>
+            <li>
+              <a href="#">List Subcategory</a>
+            </li>
+            <li>
+              <a href="#">List Data Subcategory</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Link</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+              <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="index1.html">EDUKA</a>
+        </li>
+        <li class="breadcrumb-item active">Import File Search</li>
+      </ol>
+      <div class="row">
+        <div class="col-12">
+          <h1>IMPORT FILE SEARCH EXCEL </h1>
+
+          <!-- <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" -->
+          <!-- enctype="multipart/form-data" method="post"> -->
+          <!-- <form action="" method="post" enctype="multipart/form-data"> -->
+          <p>
+            Language:
+            <br>
+            <input type="text" id="language" name="textlanguage" size="30">
+          </p>
+          <!-- ==================================================================================================================================== -->
+
+          <input type="file" name="xlfile" id="xlf" />
+          <!-- <textarea id="b64data">... or paste a base64-encoding here</textarea>
+<input type="button" id="dotext" value="Click here to process the base64 text" onclick="b64it();"/><br />-->
+          <p hidden>
+            <input type="checkbox" name="useworker" checked>
+            <input type="checkbox" name="userabs" checked></p>
+          <p hidden>
+            <pre id="out"></pre>
+            <div id="htmlout"></div>
+          </p>
+          <!-- <script src="browserify.min.js"></script> -->
+          <script type="text/javascript">
+            /* eslint no-use-before-define:0 */
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36810333-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+              var ga = document.createElement('script');
+              ga.type = 'text/javascript';
+              ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(ga, s);
+            })();
+          </script>
+          <script src="./browserify.min.js"></script>
+
+          <!-- ============================================================================================================================================================================================== -->
+          <div>
+            <button type="submit" onclick="newLanguage()"> Submit </button>
+          </div>
+          <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+          <!-- update the version number as needed -->
+          <script defer src="/__/firebase/4.4.0/firebase-app.js"></script>
+          <!-- include only the Firebase features as you need -->
+          <script defer src="/__/firebase/4.4.0/firebase-auth.js"></script>
+          <script defer src="/__/firebase/4.4.0/firebase-database.js"></script>
+          <!-- <script defer src="/__/firebase/4.4.0/firebase-messaging.js"></script> -->
+          <!-- <script defer src="/__/firebase/4.4.0/firebase-storage.js"></script> -->
+          <!-- initialize the SDK after all desired features are loaded -->
+          <script defer src="/__/firebase/init.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+          <script>
+            //var app = require('./app.js')
+            //var result = app.output;
+            var config = {
+              apiKey: "AIzaSyB5jKJuNZMbKWIMm3oDYMF7Rn6hofwVOM8",
+              authDomain: "expressa-9cc49.firebaseapp.com",
+              databaseURL: "https://expressa-9cc49.firebaseio.com",
+              projectId: "expressa-9cc49",
+              storageBucket: "expressa-9cc49.appspot.com",
+              messagingSenderId: "870488578641"
+            };
+            firebase.initializeApp(config);
+            var db = firebase.database();
+            var time = Date.now();
+            //var app = require('app.js')
+            //var app = require('./test.js');
+            //var result = app.output;
+            function newLanguage() {
+              
+              var result = document.getElementById("out").value;
+              console.log(JSON.parse(result));
+              //console.log(result);
+              var ref = db.ref("search");
+              var language = document.getElementById("language").value;
+              var usersRef = ref.child(language); // name language can edit from html (var language)
+              //var usersRef = ref.child("english");
+              return usersRef.set(JSON.parse(result),function (error) {
+                if (error) {
+                  alert("Data could not be saved." + error); //alert
+                } else {
+                  ref.child('/versionSearch').set(time);
+                  alert("Data saved successfully.");
+                  //process.exit();
+                }
+              });
+            }
+          </script>
+          <!-- </form> -->
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Website 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="index.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

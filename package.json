@@ -1,0 +1,27 @@
+{
+  "name": "fini",
+  "version": "1.0.0",
+  "description": "app Eduka - Techplus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "Api"
+  ],
+  "author": "huythong",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angularfire": "^2.3.0",
+    "express": "^4.15.4",
+    "firebase": "^4.6.0",
+    "firebase-admin": "^5.4.3",
+    "firebase-functions": "^0.7.1",
+    "firebase-tools": "^3.12.0"
+  }
+}

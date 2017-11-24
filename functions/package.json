@@ -5,8 +5,9 @@
     "array": "^0.4.3",
     "express": "^4.15.4",
     "firebase-admin": "~5.2.1",
-    "firebase-functions": "^0.6.2",
-    "full-text-search-light": "0.0.17"
+    "firebase-functions": "^0.6.3",
+    "full-text-search-light": "0.0.17",
+    "promise": "^8.0.1"
   },
   "private": true
 }

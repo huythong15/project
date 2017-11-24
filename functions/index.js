@@ -432,8 +432,8 @@ function searchKey(acronym){
 
 
 /**
- * @api {get} /api/versionsearch Phien ban hien tai
- * @apiName versionsearch
+ * @api {get} /api/allsearch data subcategory 
+ * @apiName allsearch
  * @apiGroup Search
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
